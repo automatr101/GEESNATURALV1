@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Gee's Naturals</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98SRH74RZY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-98SRH74RZY');
+  </script>
+  <meta name="description"
+    content="Get in touch with Gee's Naturals. We'd love to hear from you — whether it's a question, feedback, or a wholesale enquiry.">
+  <link rel="canonical" href="https://geesnaturals.store/contact/">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://geesnaturals.store/contact/">
+  <meta property="og:title" content="Contact Us — Gee's Naturals">
+  <meta property="og:description"
+    content="Get in touch with Gee's Naturals. We'd love to hear from you — question, feedback, or wholesale enquiry.">
+  <meta property="og:image" content="https://geesnaturals.store/assets/gallery/image0.jpeg">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .contact-hero {
+      padding-top: calc(var(--nav-height) + 4rem);
+      padding-bottom: 3rem;
+      background: var(--color-bg-alt);
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .contact-hero h1 {
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-hero p {
+      color: var(--color-text-muted);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-info-card {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      transition: var(--transition-slow);
+    }
+
+    .contact-info-card:hover {
+      border-color: var(--color-green);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-info-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--color-green-light);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-light);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-info-value {
+      font-weight: 500;
+      color: var(--color-text);
+      font-size: 0.9rem;
+    }
+
+    .contact-info-sub {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-top: 0.15rem;
+    }
+
+    /* Form */
+    .contact-form-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .contact-form-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form-desc {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-select {
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: 0.9rem;
+      outline: none;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+      font-family: inherit;
+    }
+
+    .form-select:focus {
+      border-color: var(--color-green);
+      box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.08);
+    }
+
+    /* FAQ */
+    .faq-section {
+      background: var(--color-bg-alt);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+      gap: 1rem;
+    }
+
+    .faq-question:hover {
+      background: var(--color-bg-alt);
+    }
+
+    .faq-question.open {
+      color: var(--color-green);
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .faq-question.open .faq-icon {
+      background: var(--color-green-light);
+      color: var(--color-green);
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    .faq-answer.open {
+      max-height: 200px;
+      padding: 0 1.5rem 1.25rem;
+    }
+
+    /* Map container */
+    .map-container {
+      height: 350px;
+      margin-top: 2rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../logo.svg" alt="Gee's Naturals"
+          onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=nav-logo-fallback>GN</div>')">
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../shop/index.html">Shop</a>
+        <a href="../about-us/index.html">About</a>
+        <a href="index.html" class="active">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-cart-btn" data-open-cart>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          Cart
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <button class="nav-hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../shop/index.html">Shop</a>
+    <a href="../about-us/index.html">About</a>
+    <a href="index.html">Contact</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <div class="contact-hero">
+    <div class="container">
+      <span class="section-eyebrow">Get In Touch</span>
+      <h1 class="animate-fade-up">We'd love to hear from you</h1>
+      <p class="animate-fade-up" style="animation-delay:0.1s">Whether you have a question, feedback, or a wholesale
+        enquiry — we're here and happy to help.</p>
+    </div>
+  </div>
+
+  <!-- ============ CONTACT CONTENT ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Info Cards -->
+        <div class="contact-info">
+          <div class="contact-info-card" data-reveal>
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <div class="contact-info-label">Location</div>
+              <div class="contact-info-value">Accra, Ghana</div>
+              <div class="contact-info-sub">Delivery available across Greater Accra</div>
+            </div>
+          </div>
+          <div class="contact-info-card" data-reveal data-reveal-delay="1">
+            <div class="contact-info-icon">📞</div>
+            <div>
+              <div class="contact-info-label">Phone / WhatsApp</div>
+              <div class="contact-info-value">0503959285 / 0242979962</div>
+              <div class="contact-info-sub">Mon–Sat, 8am–6pm</div>
+            </div>
+          </div>
+          <div class="contact-info-card" data-reveal data-reveal-delay="2">
+            <div class="contact-info-icon">✉️</div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">ttabariyeng@gmail.com</div>
+              <div class="contact-info-sub">We reply within 24 hours</div>
+            </div>
+          </div>
+          <div class="contact-info-card" data-reveal data-reveal-delay="3">
+            <div class="contact-info-icon">📅</div>
+            <div>
+              <div class="contact-info-label">Event Bookings</div>
+              <div class="contact-info-value">Call 0242979962</div>
+              <div class="contact-info-sub">Weddings, Parties & Corporate</div>
+            </div>
+          </div>
+
+          <div class="map-container" data-reveal data-reveal-delay="4">
+            <iframe src="https://maps.google.com/maps?q=5.7913056,-0.1739167&z=15&output=embed" width="100%"
+              height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card" data-reveal>
+          <div class="contact-form-title">Send us a message</div>
+          <p class="contact-form-desc">Fill in the form below and we'll get back to you as soon as possible.</p>
+
+          <form class="form-grid" id="contact-form" onsubmit="handleContactForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="your@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" class="form-input" placeholder="+233 XX XXX XXXX">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject *</label>
+                <select id="contact-subject" class="form-select" required>
+                  <option value="">Select a topic</option>
+                  <option value="order">Order Enquiry</option>
+                  <option value="product">Product Question</option>
+                  <option value="wholesale">Wholesale / Bulk Order</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message *</label>
+              <textarea id="contact-message" class="form-input" placeholder="Tell us how we can help you..." required
+                style="min-height:140px"></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary btn-full btn-lg" id="contact-submit">
+                Send Message
+              </button>
+              <p style="font-size:0.75rem;color:var(--color-text-light);margin-top:0.75rem;text-align:center">
+                We typically respond within 24 hours on business days.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-eyebrow">FAQ</span>
+        <h2 class="section-title" data-reveal>Frequently Asked Questions</h2>
+        <p class="section-desc" data-reveal data-reveal-delay="1">Quick answers to the questions we hear most often.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item" data-reveal data-reveal-delay="1">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How long do your juices last?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">Our juices are freshly pressed with no preservatives, so they last 5 days when
+            refrigerated. We recommend consuming them as soon as possible for the best flavour and nutrition.</div>
+        </div>
+        <div class="faq-item" data-reveal data-reveal-delay="2">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Do you deliver outside Accra?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">Currently, we deliver across Greater Accra. We're working on expanding to Kumasi and
+            other regions soon. Contact us for special arrangements for other areas.</div>
+        </div>
+        <div class="faq-item" data-reveal data-reveal-delay="1">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Are your juices suitable for diabetics?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">Our juices contain natural fruit sugars. We recommend consulting your doctor if you
+            have diabetes. We can provide detailed nutritional information for each product to help you make an informed
+            choice.</div>
+        </div>
+        <div class="faq-item" data-reveal data-reveal-delay="2">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Do you offer wholesale or bulk orders?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">Yes! We offer special pricing for restaurants, hotels, offices, and events. Contact us
+            via the form above or WhatsApp to discuss your requirements and get a custom quote.</div>
+        </div>
+        <div class="faq-item" data-reveal data-reveal-delay="1">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What payment methods do you accept?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">We accept all major payment methods through Paystack, including mobile money (MTN,
+            Vodafone, AirtelTigo), debit/credit cards, and bank transfers.</div>
+        </div>
+        <div class="faq-item" data-reveal data-reveal-delay="2">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Can I return or exchange a product?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">Due to the perishable nature of our products, we cannot accept returns. However, if
+            there's an issue with your order — damaged bottles, wrong items — please contact us within 24 hours and
+            we'll make it right.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Gee's Naturals</div>
+          <p class="footer-brand-desc">Pure fruit juices crafted with love from the finest Ghanaian produce.</p>
+          <div class="footer-social">
+            <a href="mailto:ttabariyeng@gmail.com" title="Email" aria-label="Email us"><i
+                class="fa-solid fa-envelope"></i></a>
+            <a href="https://wa.me/233503959285?text=Hello%20Gee's%20Naturals,%20I%20would%20like%20to%20order%20some%20fresh%20juice!"
+              title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener"><i
+                class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:0242979962" title="Phone" aria-label="Call us"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Shop</div>
+          <div class="footer-links">
+            <a href="../shop/index.html">All Products</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <div class="footer-links">
+            <a href="../about-us/index.html">About Us</a>
+            <a href="index.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Help</div>
+          <div class="footer-links">
+            <a href="index.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Gee's Naturals. All rights reserved.</span>
+        <span>Made with 💚 in Ghana</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cart-close-btn">✕</button>
+    </div>
+    <div class="cart-empty" id="cart-empty" style="display:flex">
+      <div class="cart-empty-icon">🛒</div>
+      <p><strong>Your cart is empty</strong></p>
+      <p class="text-muted" style="font-size:0.875rem">Add some juices to get started!</p>
+      <a href="../shop/index.html" class="btn btn-primary btn-sm">Shop Now</a>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="cart-subtotal"><span>Subtotal</span><span id="cart-subtotal">₵0.00</span></div>
+      <div class="cart-total"><span>Total</span><span id="cart-total">₵0.00</span></div>
+      <button class="btn btn-primary btn-full" onclick="initiateCheckout()">Checkout with Paystack</button>
+      <button class="btn btn-ghost btn-full btn-sm" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </aside>
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="../app.js"></script>
+  <script>
+    function toggleFaq(el) {
+      const answer = el.nextElementSibling;
+      const isOpen = el.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      // Open clicked if it was closed
+      if (!isOpen) {
+        el.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+
+    async function handleContactForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit');
+      const originalText = btn.textContent;
+
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const formData = {
+        name: document.getElementById('contact-name').value,
+        email: document.getElementById('contact-email').value,
+        phone: document.getElementById('contact-phone').value,
+        subject: document.getElementById('contact-subject').value,
+        message: document.getElementById('contact-message').value
+      };
+
+      const success = await sendMessage(formData);
+
+      if (success) {
+        e.target.reset();
+      }
+
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }
+  </script>
+</body>
+
+</html>

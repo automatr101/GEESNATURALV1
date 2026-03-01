@@ -1,0 +1,12 @@
+{
+    "name": "gee-s-naturals",
+    "version": "1.0.0",
+    "description": "Gee's Naturals E-commerce Site",
+    "main": "app.js",
+    "scripts": {
+        "start": "serve ."
+    },
+    "dependencies": {
+        "serve": "^14.2.0"
+    }
+}

@@ -1,0 +1,18 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mango Shape -->
+  <g transform="translate(10, 5)">
+    <path d="M25,5 C15,5 5,15 5,30 C5,45 15,50 25,50 C38,50 45,40 45,25 C45,12 35,5 25,5 Z" fill="none" stroke="#2D5016" stroke-width="2.5" />
+    <circle cx="15" cy="20" r="1.5" fill="#2D5016" opacity="0.4" />
+    <circle cx="20" cy="35" r="1.5" fill="#2D5016" opacity="0.4" />
+    <circle cx="35" cy="25" r="1.5" fill="#2D5016" opacity="0.4" />
+    <circle cx="30" cy="40" r="1.5" fill="#2D5016" opacity="0.4" />
+    <!-- Leaf -->
+    <path d="M25,5 Q35,0 40,8 Q30,12 25,5 Z" fill="#2D5016" stroke="#2D5016" stroke-width="1" />
+    <!-- Swoosh -->
+    <path d="M5,42 Q25,62 45,47" fill="none" stroke="#C8860A" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+  
+  <!-- Text -->
+  <text x="60" y="38" font-family="sans-serif" font-weight="900" font-size="28" fill="#2D5016" letter-spacing="-0.5">GEE'S</text>
+  <text x="62" y="55" font-family="serif" font-style="italic" font-size="16" fill="#C8860A" letter-spacing="0.5">Naturals</text>
+</svg>
