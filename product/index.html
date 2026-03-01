@@ -558,6 +558,60 @@
       const detail = document.getElementById('product-detail');
       const defaultVariant = product.variants[2]; // 500ml
 
+      // Inject JSON-LD for Product and Breadcrumb Ranking
+      const existingSchema = document.getElementById('product-schema');
+      if (existingSchema) existingSchema.remove();
+
+      const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": product.name,
+        "image": [
+          `https://geesnaturals.store/${product.image.replace('../', '')}`
+        ],
+        "description": product.description,
+        "brand": {
+          "@type": "Brand",
+          "name": "Gee's Naturals"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": window.location.href,
+          "priceCurrency": "GHS",
+          "lowPrice": product.variants[0].price,
+          "highPrice": product.variants[2].price,
+          "offerCount": product.variants.length,
+          "availability": "https://schema.org/InStock"
+        }
+      };
+
+      const breadcrumbData = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://geesnaturals.store/"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Shop",
+          "item": "https://geesnaturals.store/shop/"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": product.name,
+          "item": window.location.href
+        }]
+      };
+
+      const script = document.createElement('script');
+      script.id = 'product-schema';
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify([schemaData, breadcrumbData]);
+      document.head.appendChild(script);
+
       detail.innerHTML = `
       <div class="product-gallery" data-reveal>
         <div class="product-main-image">
