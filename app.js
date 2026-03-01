@@ -681,7 +681,7 @@ function initNav() {
   document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(link => {
     const href = link.getAttribute('href') || '';
     // Handle both relative and absolute paths for active state
-    if (currentPath === '/' && (href === 'index.html' || href === '../home/index.html')) {
+    if (currentPath === '/' || currentPath === '/index.html' || href === 'index.html' || href === '../index.html') {
       link.classList.add('active');
     } else if (href !== '#' && currentPath.includes(href.replace('../', ''))) {
       link.classList.add('active');
