@@ -720,6 +720,21 @@
 
       document.title = `${product.name} — Gee's Naturals`;
       initScrollReveal();
+
+      // GA4 Ecommerce: view_item evento for Search & Ranking
+      if (typeof trackEvent === 'function') {
+        trackEvent('view_item', {
+          currency: 'GHS',
+          value: product.variants[2].price,
+          items: [{
+            item_id: product.id.toString(),
+            item_name: product.name,
+            item_category: product.category,
+            price: product.variants[2].price,
+            quantity: 1
+          }]
+        });
+      }
     }
 
     function updateDetailSize(btn, size, price) {

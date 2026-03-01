@@ -382,6 +382,16 @@ function closeCheckoutModal() {
 }
 
 function initiateCheckout() {
+  trackEvent('begin_checkout', {
+    currency: 'GHS',
+    value: getCartTotal(),
+    items: cart.map(i => ({
+      item_id: i.id,
+      item_name: i.name,
+      price: i.price,
+      quantity: i.qty
+    }))
+  });
   openCheckoutModal();
 }
 
